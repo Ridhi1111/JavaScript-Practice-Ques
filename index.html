@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<button id="clickMe">click</button>
+    Javascript
+    <script >
+
+//     var a = 10;
+//     function b() {
+//     var x = 10;
+// }
+// console.log(window.a);
+// console.log(a);
+// console.log(this.a);
+
+debugger;
+function outer()
+{
+	function create_Closure(val)
+	{
+		return function()
+		{
+			return val;
+		}
+	}
+	var arr = [];
+	var i;
+	for (i = 0; i < 4; i++)
+	{
+		arr[i] = create_Closure(i);
+	}
+	return arr;
+}
+var get_arr = outer();
+console.log(get_arr[0]());
+console.log(get_arr[1]());
+console.log(get_arr[2]());
+console.log(get_arr[3]());
+// console.log(a)
+// var a = "abc";
+
+// console.log(a)
+
+// debugger;
+// function x() {
+//     for(var i = 1; i <= 5; i++) {
+//         setTimeout(function() {
+//             console.log(i);
+//         }, i * 1000);
+//     }
+//     console.log("Namaste JavaScript");
+// }
+// x();
+
+//Outer function
+// debugger;
+// function outer()
+// {
+// 	var arr = [];
+// 	var i;
+// 	for (i = 0; i < 5; i++)
+// 	{
+// 		// storing anonymous function
+// 		arr[i] = function () 
+//         {   return i;
+//          }
+        
+// 	}
+    
+// 	return arr;
+// }
+// outer();
+
+// function outer()
+// {
+// 	var arr = [];
+// 	var i;
+// 	for (i = 0; i < 4; i++)
+// 	{
+// 		// storing anonymous function
+// 		arr[i] = function () 
+//         {   return i;
+//         }
+        
+// 	}
+    
+// 	return arr;
+// }
+// //outer();
+
+// var get_arr = outer();
+// console.log(get_arr);
+// console.log(get_arr[0]());
+// console.log(get_arr[1]());
+// console.log(get_arr[2]());
+// console.log(get_arr[3]());
+
+
+
+    </script>
+	
+<script src="/index.js"></script>
+</body>
+</html>
